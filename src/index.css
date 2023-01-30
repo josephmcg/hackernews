@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  @apply h-full w-full overflow-hidden;
+}
+
+#root {
+  @apply flex justify-center bg-slate-800 text-slate-200;
+}
+
+*:focus-visible {
+  @apply outline-none ring-2 ring-indigo-300;
+}
