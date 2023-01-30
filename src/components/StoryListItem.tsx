@@ -20,7 +20,7 @@ export const StoryListItem: React.FC<Story> = ({
             {score}
           </span>
         </div>
-        {/* cant use falsy since descendants can be 0 */}
+        {/* can't use truthy check since descendants can be 0 */}
         {typeof descendants === "number" && (
           <a
             className="flex items-center justify-between gap-2 rounded hover:underline"

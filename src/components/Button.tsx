@@ -30,18 +30,16 @@ export const Button: React.FC<ButtonProps> = ({
   className,
   children,
 }) => {
-  const classes = clsx(
-    "flex items-center justify-center gap-2 rounded-md border border-indigo-500 font-medium shadow-sm transition-colors",
-    active ? "bg-indigo-700" : "hover:bg-indigo-400 hover:text-indigo-900",
-    getDerivedSize[size],
-    (disabled || loading) && "opacity-60 pointer-events-none",
-    className
-  );
-
   return (
     <button
       type={type}
-      className={classes}
+      className={clsx(
+        "flex items-center justify-center gap-2 rounded-md border border-indigo-500 font-medium shadow-sm transition-colors",
+        active ? "bg-indigo-700" : "hover:bg-indigo-400 hover:text-indigo-900",
+        getDerivedSize[size],
+        (disabled || loading) && "pointer-events-none opacity-60",
+        className
+      )}
       onClick={onClick}
       disabled={disabled || loading}
     >

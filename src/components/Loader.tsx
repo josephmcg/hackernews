@@ -18,7 +18,7 @@ export const Loader: React.FC<LoaderProps> = ({ size = "md" }) => {
       <svg
         aria-hidden="true"
         className={clsx(
-          "animate-spin fill-indigo-600 text-gray-200 dark:text-gray-600",
+          "animate-spin fill-indigo-600 text-gray-600",
           getDerivedSize[size]
         )}
         viewBox="0 0 100 101"

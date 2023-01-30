@@ -7,7 +7,7 @@ describe("Button", () => {
     expect(screen.getByText(/Content/i)).toBeDefined();
   });
 
-  test("should call function 'test' onClick", () => {
+  test("should call onClick when clicked", () => {
     const mockedFunction = vi.fn();
     render(<Button onClick={mockedFunction}>Content</Button>);
     const button = screen.getByText(/Content/i);

@@ -17,7 +17,3 @@ export type Story = {
   parts?: Story["id"][];
   descendants?: number;
 };
-
-export type StoryPageMap = {
-  [key: number]: Story[];
-};

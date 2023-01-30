@@ -30,7 +30,7 @@ export const StoryList: React.FC = () => {
   // is first fetch done
   const areIdsReady = Boolean(storyIds?.length);
 
-  // fetch all stories for current page
+  // using previously fetched ids, fetch all stories for current page
   const {
     isLoading,
     isIdle,
@@ -82,14 +82,14 @@ export const StoryList: React.FC = () => {
         {/* 
           generate an array of n integers (starting from 0).
           n = NUM_TOTAL_STORIES / NUM_PER_PAGE */}
-        {[...Array(NUM_TOTAL_STORIES / NUM_PER_PAGE).keys()].map((pageNum) => (
+        {[...Array(NUM_TOTAL_STORIES / NUM_PER_PAGE).keys()].map((i) => (
           <Button
-            key={pageNum}
-            onClick={() => setPage(pageNum + 1)}
+            key={i}
+            onClick={() => setPage(i + 1)}
             size="lg"
-            active={page === pageNum + 1}
+            active={page === i + 1}
           >
-            {pageNum + 1}
+            {i + 1}
           </Button>
         ))}
       </div>
