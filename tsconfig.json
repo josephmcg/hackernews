@@ -21,12 +21,6 @@
     },
     "types": ["vitest/globals"]
   },
-  "include": [
-    "src",
-    "test/StoryListItem.test.tsx",
-    "test/StoryListItem.test.tsx",
-    "test/Button.test.tsx",
-    "test/Button.test.tsx"
-  ],
+  "include": ["src", "test"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

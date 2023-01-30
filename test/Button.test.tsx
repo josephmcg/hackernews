@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, test, vi } from "vitest";
 import { Button } from "~/components/Button";
 
 describe("Button", () => {
