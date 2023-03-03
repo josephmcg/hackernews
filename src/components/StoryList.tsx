@@ -13,7 +13,7 @@ export const StoryList: React.FC = () => {
     if (page === 1) {
       return `${page}-${NUM_PER_PAGE} of ${NUM_TOTAL_STORIES}`;
     }
-    return `${(page - 1) * NUM_PER_PAGE}-${
+    return `${(page - 1) * NUM_PER_PAGE + 1}-${
       page * NUM_PER_PAGE
     } of ${NUM_TOTAL_STORIES}`;
   };
