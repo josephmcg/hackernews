@@ -1,6 +1,7 @@
-import { ChatBubbleLeftIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
-import { Story } from "~/types";
+import { ChatBubbleLeftIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
+import clsx from 'clsx'
+
+import type { Story } from '~/types'
 
 export const StoryListItem: React.FC<Story> = ({
   by,
@@ -21,10 +22,10 @@ export const StoryListItem: React.FC<Story> = ({
           </span>
         </div>
         {/* can't use truthy check since descendants can be 0 */}
-        {typeof descendants === "number" && (
+        {typeof descendants === 'number' && (
           <a
             className="flex items-center justify-between gap-2 rounded hover:underline"
-            href={`https://news.ycombinator.com/item?id=${id}`}
+            href={`https://news.ycombinator.com/item?id=${id.toString()}`}
             target="_blank"
             rel="noreferrer"
             title="view comments on Hacker News"
@@ -41,8 +42,8 @@ export const StoryListItem: React.FC<Story> = ({
       <div className="flex h-full flex-col justify-between">
         <a
           className={clsx(
-            "self-start rounded",
-            url && "text-blue-400 hover:underline"
+            'self-start rounded',
+            url && 'text-blue-400 hover:underline',
           )}
           href={url}
           target="_blank"
@@ -55,5 +56,5 @@ export const StoryListItem: React.FC<Story> = ({
         <div className="text-sm text-slate-400">by: {by}</div>
       </div>
     </div>
-  );
-};
+  )
+}

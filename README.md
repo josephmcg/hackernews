@@ -1,3 +1,7 @@
 # Hacker News Stories
 
-`yarn dev` to run
+```sh
+nvm use
+pnpm i
+pnpm dev
+```

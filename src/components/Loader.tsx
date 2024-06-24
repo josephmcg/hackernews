@@ -1,25 +1,26 @@
-import clsx from "clsx";
-import { Size } from "~/types";
+import clsx from 'clsx'
+
+import type { Size } from '~/types'
 
 type LoaderProps = {
-  size?: Size;
-};
+  size?: Size
+}
 
 const getDerivedSize: Record<Size, string> = {
-  sm: "w-4 h-4",
-  md: "w-8 h-8",
-  lg: "w-10 h-10",
-  xl: "w-12 h-12",
-};
+  sm: 'w-4 h-4',
+  md: 'w-8 h-8',
+  lg: 'w-10 h-10',
+  xl: 'w-12 h-12',
+}
 
-export const Loader: React.FC<LoaderProps> = ({ size = "md" }) => {
+export const Loader: React.FC<LoaderProps> = ({ size = 'md' }) => {
   return (
-    <div role="status">
+    <div role="status" className="flex flex-grow items-center">
       <svg
         aria-hidden="true"
         className={clsx(
-          "animate-spin fill-indigo-600 text-gray-600",
-          getDerivedSize[size]
+          'animate-spin fill-indigo-600 text-gray-600',
+          getDerivedSize[size],
         )}
         viewBox="0 0 100 101"
         fill="none"
@@ -36,5 +37,5 @@ export const Loader: React.FC<LoaderProps> = ({ size = "md" }) => {
       </svg>
       <span className="sr-only">Loading...</span>
     </div>
-  );
-};
+  )
+}

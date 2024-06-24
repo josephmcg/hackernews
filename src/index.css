@@ -4,8 +4,9 @@
 
 html,
 body,
-#root {
-  @apply h-full w-full overflow-hidden;
+#root,
+main {
+  @apply min-h-svh w-full;
 }
 
 #root {

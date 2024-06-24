@@ -3,4 +3,4 @@ dist/
 .prettierrc
 .eslintrc.json
 postcss.config.cjs
-tailwind.config.cjs
+coverage
