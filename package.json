@@ -12,10 +12,10 @@
     "preview": "vite preview",
     "\n========== Lint ==========": "",
     "lint": "pnpm run '/^lint:.*/'",
-    "lint:eslint": "eslint --cache --fix src",
+    "lint:eslint": "eslint --cache src",
     "lint:tsc": "tsc --noEmit",
     "\n========== Test ==========": "",
-    "test": "vitest",
+    "test": "vitest run",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
