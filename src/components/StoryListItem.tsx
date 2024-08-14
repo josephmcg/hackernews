@@ -24,7 +24,7 @@ export const StoryListItem: React.FC<Story> = ({
         {/* can't use truthy check since descendants can be 0 */}
         {typeof descendants === 'number' && (
           <a
-            className="flex items-center justify-between gap-2 rounded hover:underline"
+            className="flex items-center justify-between gap-2 rounded underline hover:opacity-70"
             href={`https://news.ycombinator.com/item?id=${id.toString()}`}
             target="_blank"
             rel="noreferrer"
