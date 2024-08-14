@@ -4,7 +4,6 @@ import type { Size } from '~/types'
 
 export interface ButtonProps extends React.ComponentProps<'button'> {
   size?: Size
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
   loading?: boolean
   active?: boolean
 }

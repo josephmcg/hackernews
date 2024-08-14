@@ -10,6 +10,11 @@ import type { Story } from '~/types'
 export const StoryList: React.FC = () => {
   const [page, setPage] = useState(1)
 
+  function handleClick(newPage: number): void {
+    setPage(newPage)
+    document.documentElement.scrollTop = 0
+  }
+
   const bottomResultsInfo = (): string => {
     if (page === 1) {
       return `${page.toString()}-${NUM_PER_PAGE.toString()} of ${NUM_TOTAL_STORIES.toString()}`
@@ -76,18 +81,18 @@ export const StoryList: React.FC = () => {
           {stories?.map((story) => <StoryListItem key={story.id} {...story} />)}
         </div>
       )}
-      <div className="flex w-full max-w-3xl items-center gap-2">
+      <div className="sticky bottom-0 flex w-full max-w-3xl items-center gap-2 bg-slate-800 py-4 shadow-lg">
         <div className="mr-auto text-sm">{bottomResultsInfo()}</div>
         {[
           ...Array.from({ length: NUM_TOTAL_STORIES / NUM_PER_PAGE }).keys(),
         ].map((i) => (
           <Button
             key={i}
-            onClick={() => {
-              setPage(i + 1)
-            }}
             size="lg"
             active={page === i + 1}
+            onClick={() => {
+              handleClick(i + 1)
+            }}
           >
             {i + 1}
           </Button>
